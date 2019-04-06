@@ -1,0 +1,3 @@
+defmodule RubberDux do
+
+end
