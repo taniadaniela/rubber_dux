@@ -4,9 +4,7 @@ defmodule RubberDux.CLI do
   end
 
   @commands %{
-    "quit" => "Quits the simulator",
-    "ask" => "format: \"ask whatever\". " <>
-             "receives a question, provide an answer"
+    "just type your question here" => "receives a question, provide an answer"
   }
 
   def process_args(_) do
@@ -21,7 +19,6 @@ defmodule RubberDux.CLI do
     IO.gets("> ")
     |> String.trim
     |> String.downcase
-    |> String.split(" ")
     |> execute_command
   end
 
@@ -31,14 +28,12 @@ defmodule RubberDux.CLI do
     |> Enum.map(fn({command, description}) -> IO.puts("  #{command} - #{description}") end)
   end
 
-  defp execute_command(["ask" | params]) do
+  defp execute_command(params) do
     {:ok, answer} = RubberDux.ask(params)
     IO.puts(answer)
     receive_command
   end
 
-  defp execute_command(["quit"]) do
-    IO.puts "\nSee you, cuak!"
-  end
+  
 
 end
