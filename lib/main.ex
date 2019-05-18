@@ -29,10 +29,11 @@ defmodule RubberDux.CLI do
   end
 
   defp execute_command(params) do
-    {:ok, answer} = RubberDux.ask(params)
+    {:ok, answer} = RubberDux.process(params)
     IO.puts(answer)
     receive_command
   end
+
 
   
 
