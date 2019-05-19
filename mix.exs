@@ -22,7 +22,8 @@ defmodule RubberDux.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, only: :dev, runtime: false}
+      {:ex_doc, only: :dev, runtime: false},
+      {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
     ]
   end
 
