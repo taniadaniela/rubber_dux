@@ -1,10 +1,12 @@
-# rubber_dux
+# RubberDux
 rubber duck terminal app
 
 RubberDuX is an small debugging personal helper made with [Elixir.](https://github.com/elixir-lang/elixir)
 This project was conceived to improve skills with Elixir and learn something new.
 
 It can help you with some ideas or points to investigate when having code problems.
+
+Inspired in [Rubber ducking as a service.](https://github.com/atleastimtrying/rubber_duck)
 
 ## How to run?
 In your terminal:
@@ -20,6 +22,9 @@ there you can type a question and the smarty duck will provide its wisdom:
 You can keep asking questions until you fix your problem.
 
 You can hit Cmd + c (Ctrl + c) to quit the app.
+
+## Code analyzer
+`mix credo --strict`
 
 ## Contribute
 You can help with keywords of problems and solutions associated to them, check lib/rubber_dux.ex file.
