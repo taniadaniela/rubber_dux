@@ -1,5 +1,5 @@
 defmodule RubberDux.CLI do
-
+  @moduledoc false
   @duckie "
       __
     <(o )___
