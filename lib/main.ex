@@ -1,10 +1,18 @@
 defmodule RubberDux.CLI do
+
+  @duckie "
+      __
+    <(o )___
+    ( ._> /
+     `---'"
+
   def main(args) do
     args |> process_args
   end
 
   def process_args(_) do
     IO.puts("Tell the duckie what is happening with your code:")
+    IO.puts(@duckie)
     receive_command()
   end
 
@@ -22,8 +30,5 @@ defmodule RubberDux.CLI do
     IO.puts(answer)
     receive_command
   end
-
-
-  
 
 end
