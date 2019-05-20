@@ -10,6 +10,9 @@ Are you in the allowed IP range?"}
       Enum.any?(["test", "tests"], fn x -> x in separated end) ->
         {:ok, "Is the test environment configuration correct?\n
 Is your test or fixture data affecting your test scenarios?"}
+      Enum.any?(["method", "function"], fn x -> x in separated end) ->
+        {:ok, "Are the received parameters correct?\n
+Are the parameters being modified?"}
       Enum.any?(["inheritance", "class", "object"], fn x -> x in separated end) ->
         {:ok, "Is the father class correct?\n
 Are methods accesible by the child classes?\n
@@ -26,7 +29,7 @@ Are the variables under the right scope?"}
 What about a DNS issue?\n
 Have You Tried Turning It Off And On Again?"}
       true ->
-        {:ok, "cuak"}
+        {:ok, "cuak, I need more details."}
     end
   end
 end
