@@ -11,6 +11,9 @@ Are you in the allowed IP range?\n"}
         {:ok, "Is the test environment configuration correct?\n
 Is your test or fixture data affecting your test scenarios?\n
 Are the requests being stubbed?\n"}
+      Enum.any?(["date", "dates", "time"], fn x -> x in separated end) ->
+        {:ok, "Is the format correct?\n
+Are you using timezones?"}
       Enum.any?(["method", "function"], fn x -> x in separated end) ->
         {:ok, "Are the received parameters correct?\n
 Are the parameters being modified?\n"}
@@ -20,7 +23,8 @@ Are methods accesible by the child classes?\n
 Are the inherited methods being overwritten?\n"}
       Enum.any?(["routes", "route", "endpoint"], fn x -> x in separated end) ->
         {:ok, "Are the routes defined?\n
-Are routes accesible?\n"}
+Are routes accesible?\n
+What about permissions?\n"}
       Enum.any?(["var", "variables", "vars", "variables"], fn x -> x in separated end) ->
         {:ok, "Could the variables being overwritten?\n
 Are the variables under the right scope?\n"}
