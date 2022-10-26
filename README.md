@@ -1,7 +1,7 @@
 # RubberDux
 rubber duck terminal app
 
-RubberDuX is an small debugging personal helper made with [Elixir.](https://github.com/elixir-lang/elixir)
+RubberDuX is a small debugging personal helper made with [Elixir.](https://github.com/elixir-lang/elixir)
 This project was conceived to improve skills with Elixir and learn something new.
 
 It can help you with some ideas or points to investigate when having code problems.
